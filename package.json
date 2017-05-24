@@ -47,7 +47,7 @@
     "eslint": "^3.7.0",
     "eslint-config-locoslab": "0.1.0",
     "html2jade": "^0.8.4",
-    "jest-cli": "^19.0.0",
+    "jest-cli": "^20.0.4",
     "pug": "^2.0.0-beta6",
     "typescript": "^2.0.3",
     "vue": "^2.0.7",
