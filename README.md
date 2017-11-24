@@ -89,7 +89,7 @@ describe('counter-ts.vue', () => {
 * To further simplify snapshot testing with Jest and html2jade, cf. <https://github.com/locoslab/vue-jest-utils>
 * To use TypeScript classes as Vue.js components, cf.
 <https://github.com/locoslab/vue-typescript-component>
-* Inline TypeScript code in a `*.vue` file is not supported. We prefer separate files to make use of existing IDE/editor and tooling support for TypeScript files. Instead, import the TypeScript module as follows
+* Although Inline TypeScript code in a `*.vue` file is supported i.e. `<script lang="ts">`. We prefer separate files to make use of existing IDE/editor and tooling support for TypeScript files. Instead, import the TypeScript module as follows
 ```html
 <template>
 ...
