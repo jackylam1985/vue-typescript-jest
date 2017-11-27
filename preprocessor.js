@@ -72,7 +72,7 @@ function vue(src, filePath) {
 	if (!parts.script.lang) {
 		script = babel(parts.script.content)
 	} else if (parts.script.lang === 'ts') {
-		script = babel(ts(parts.script.content))
+		script = babel(ts(parts.script.content, filePath))
 	} else {
 		throw filePath + ': unknown <script lang="' + parts.script.lang + '">'
 	}
