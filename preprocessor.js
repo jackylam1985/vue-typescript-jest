@@ -69,12 +69,14 @@ function vue(src, filePath) {
 	const vueCompiler = require('vue-template-compiler')
 	const parts = vueCompiler.parseComponent(src, { pad: true })
 	let script = ''
-	if (!parts.script.lang) {
-		script = babel(parts.script.content)
-	} else if (parts.script.lang === 'ts') {
-		script = babel(ts(parts.script.content, filePath))
-	} else {
-		throw filePath + ': unknown <script lang="' + parts.script.lang + '">'
+	if (script) {
+		if (!parts.script.lang) {
+			script = babel(parts.script.content)
+		} else if (parts.script.lang === 'ts') {
+			script = babel(ts(parts.script.content, filePath))
+		} else {
+			throw filePath + ': unknown <script lang="' + parts.script.lang + '">'
+		}
 	}
 	let html = ''
 	if (!parts.template.lang || parts.template.lang === 'html') {
